@@ -3,7 +3,6 @@ from playwright.sync_api import Browser, BrowserContext, Page, sync_playwright
 
 
 def pytest_addoption(parser):
-    """Пользовательские опции командной строки"""
     parser.addoption('--bn', action='store', default="chrome", help="Choose browser: chrome, remote_chrome or firefox")
     parser.addoption('--h', action='store', default=False, help='Choose headless: True or False')
     parser.addoption('--s', action='store', default={'width': 1920, 'height': 1080}, help='Size window: width,height')
